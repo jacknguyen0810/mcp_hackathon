@@ -8,6 +8,7 @@ nest_asyncio.apply()
 study_context = "Diffusion models are a type of machine learning models"
 api_key = os.getenv("OPENAI_API_KEY")
 
-agent = WikipediaNoteAgent(study_context="The French Revolution...", openai_api_key=os.getenv("OPENAI_API_KEY"))
+
+agent = WikipediaNoteAgent(study_context=study_context, openai_api_key=api_key)
 note = asyncio.run(agent.run())
 print(note)
