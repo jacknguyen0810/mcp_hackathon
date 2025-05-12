@@ -1,0 +1,39 @@
+1. **Diffusion Models**: Generative models that create data by transforming a simple distribution (like Gaussian noise) into a complex data distribution through a series of steps. They are significant for generating high-quality samples in various domains, including images and audio.
+
+2. **Latent Variables**: Hidden variables that represent the underlying structure of the data during the diffusion process. They are crucial for capturing data complexity and enabling meaningful representation learning.
+
+3. **U-Net Architecture**: A neural network architecture effective for image generation and segmentation tasks. Its importance lies in capturing multi-scale features and performing effective denoising, essential in diffusion models.
+
+4. **Classifier-Free Guidance**: A technique that allows the model to incorporate class information without a separate classifier, enhancing the model's ability to generate class-specific outputs, making it more versatile and efficient.
+
+5. **Cascaded Conditional Generation**: An approach using multiple diffusion models to generate images at increasing resolutions, allowing for high-resolution image creation while maintaining coherence and detail.
+
+6. **Noise Schedule**: A strategy for varying the amount of noise added at each diffusion step. A well-designed noise schedule improves sample quality by controlling diffusion dynamics.
+
+7. **Evidence Lower Bound (ELBO)**: A key loss function in training diffusion models that helps optimize the model to approximate the reverse denoising process, ensuring effective learning from data.
+
+8. **Marginal Distributions**: Represent the probability of latent variables at specific time steps. Understanding these distributions is essential for analyzing diffusion behavior and ensuring accurate sampling.
+
+9. **Diffusion Kernel**: A mathematical formulation for efficient sampling of latent variables at any time step, simplifying training and generation processes for efficiency.
+
+10. **High-Resolution Image Generation**: Achieved through cascaded models, enabling the generation of detailed and realistic images, a key goal in generative modeling.
+
+11. **Stochastic Nature of Diffusion Models**: The inherent randomness in the diffusion process allows for diverse outputs from the same input, crucial for applications requiring creativity and variability.
+
+12. **Truncation in GANs**: Relates to controlling output diversity in generative models, helping balance quality and variability in generated samples.
+
+13. **Variance Estimation**: Estimating variances of the reverse process improves sample quality, especially with fewer steps, optimizing the trade-off between computational efficiency and output fidelity.
+
+14. **Text Conditioning**: Using textual prompts to guide the generation process, significant for applications like text-to-image generation, aligning visual outputs with textual descriptions.
+
+15. **Joint Training on Conditional and Unconditional Objectives**: A strategy allowing models to learn from both data types, enhancing flexibility and capability to generate diverse outputs.
+
+16. **Sampling Efficiency**: The ability to generate samples quickly and accurately, crucial for practical applications, improving usability of diffusion models in real-time scenarios.
+
+17. **Class Embeddings**: Incorporating class information into the model enhances its ability to generate specific output types, important for targeted generation based on predefined categories.
+
+18. **Reverse Denoising Process**: The core mechanism of diffusion models, transforming noise back into data, essential for improving quality and realism of generated samples.
+
+19. **ImageNet Class Conditioning**: Training models on specific classes from the ImageNet dataset demonstrates their ability to learn and generate diverse outputs, significant for evaluating model performance.
+
+20. **Text Caption Encoding**: Using advanced models to encode text captions for conditioning the diffusion process, crucial for generating images that accurately reflect provided descriptions, enhancing applicability in creative fields.
