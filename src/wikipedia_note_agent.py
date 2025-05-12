@@ -75,7 +75,7 @@ class WikipediaNoteAgent:
             name="note_writer",
             system_message=system_msg,
             llm_config=config,
-            update_agent_state_before_reply=[UpdateSystemMessage(system_msg)],
+            update_agent_state_before_reply=[UpdateSystemMessage(system_msg)]
         )
 
     def _create_mcp_agent(self) -> ConversableAgent:
@@ -104,7 +104,7 @@ class WikipediaNoteAgent:
         cache_path = Path(".cache")
         if cache_path.exists():
             shutil.rmtree(cache_path)
-            print("✅ .cache folder deleted.")
+            print(" .cache folder deleted.")
 
     async def run(self):
         # conexión con el servidor MCP
@@ -145,5 +145,19 @@ class WikipediaNoteAgent:
             await a_initiate_group_chat(
                 pattern=pattern,
                 messages=task_msg,
-                max_rounds=20,
+                max_rounds=20
             )
+
+            final_note = None
+            for sender, messages in self.note_writer.chat_messages.items():
+                for msg in reversed(messages):
+                    if msg.get("role") == "assistant" and msg.get("content"):
+                        final_note = msg["content"]
+                        break
+                if final_note:
+                    break
+
+            if final_note is None:
+                raise RuntimeError("No assistant message found in note_writer output.")
+
+            return final_note
