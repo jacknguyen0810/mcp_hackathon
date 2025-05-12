@@ -5,7 +5,7 @@ import logging
 from typing import Dict, List, Any, Optional, Tuple
 import requests
 from datetime import datetime
-from question_generator import QuestionGeneratorAgent
+from src.question_generator import QuestionGeneratorAgent
 
 # Configure logging
 logging.basicConfig(
