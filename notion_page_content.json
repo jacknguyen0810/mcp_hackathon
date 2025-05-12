@@ -1,0 +1,508 @@
+{
+  "id": "160ab8e5-2126-8023-9210-c6501484cd90",
+  "created_time": "2024-12-18T12:20:00.000Z",
+  "last_edited_time": "2025-05-12T14:03:00.000Z",
+  "title": "Interesting papers",
+  "content": [
+    {
+      "id": "162ab8e5-2126-80a9-8081-c930ec449bc6",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "162ab8e5-2126-80a3-92b2-f6bd855c354e",
+      "type": "heading_1",
+      "text": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+    },
+    {
+      "id": "162ab8e5-2126-8070-9968-ed7ccf56c241",
+      "type": "paragraph",
+      "text": "Here's how RAG works:"
+    },
+    {
+      "id": "162ab8e5-2126-8040-832c-ccd953d49321",
+      "type": "numbered_list_item",
+      "text": "Document Processing: Your documents are processed and converted into embeddings (vector representations) using an embedding model"
+    },
+    {
+      "id": "162ab8e5-2126-80d3-815d-c3c80cb1ed27",
+      "type": "numbered_list_item",
+      "text": "Storage: These embeddings are stored in a vector database or similar storage system"
+    },
+    {
+      "id": "162ab8e5-2126-8071-8b00-cc99d3e90cdc",
+      "type": "numbered_list_item",
+      "text": "Runtime Process:"
+    },
+    {
+      "id": "162ab8e5-2126-8073-88c2-e550cc57ccf0",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "162ab8e5-2126-805f-87af-dba7bd595fba",
+      "type": "heading_3",
+      "text": "Core Innovation:"
+    },
+    {
+      "id": "162ab8e5-2126-8051-a750-cff7788a5daf",
+      "type": "bulleted_list_item",
+      "text": "Combines parametric memory (pre-trained language models) with non-parametric memory (retrieval from documents)"
+    },
+    {
+      "id": "162ab8e5-2126-80b6-ac05-e84e2b2eccb3",
+      "type": "bulleted_list_item",
+      "text": "Uses BART as generator and DPR (Dense Passage Retriever) to retrieve from Wikipedia"
+    },
+    {
+      "id": "162ab8e5-2126-80e4-8fee-e835b0081141",
+      "type": "bulleted_list_item",
+      "text": "Can be fine-tuned for any sequence-to-sequence task"
+    },
+    {
+      "id": "162ab8e5-2126-80d9-8dba-d7c89a07b56a",
+      "type": "heading_3",
+      "text": "Two Model Variants"
+    },
+    {
+      "id": "162ab8e5-2126-8015-862c-db71f1218b4e",
+      "type": "bulleted_list_item",
+      "text": "RAG-Sequence: Uses the same retrieved document for generating the entire sequence"
+    },
+    {
+      "id": "162ab8e5-2126-802f-b787-daf1a4916e67",
+      "type": "bulleted_list_item",
+      "text": "RAG-Token: Can use different documents for generating each token"
+    },
+    {
+      "id": "162ab8e5-2126-8056-aa6e-cb74dbe2d3ba",
+      "type": "heading_3",
+      "text": "Key Components"
+    },
+    {
+      "id": "162ab8e5-2126-8035-ba50-e4b9ccb86258",
+      "type": "bulleted_list_item",
+      "text": "Retriever: DPR with BERT-based encoders for queries and documents"
+    },
+    {
+      "id": "162ab8e5-2126-80d1-98dd-eca73f958989",
+      "type": "bulleted_list_item",
+      "text": "Generator: BART-large for sequence generation"
+    },
+    {
+      "id": "162ab8e5-2126-805b-92c9-fcaabe5d6143",
+      "type": "bulleted_list_item",
+      "text": "Document Index: Wikipedia passages as non-parametric knowledge source"
+    },
+    {
+      "id": "162ab8e5-2126-8055-b95d-ee470d1885f9",
+      "type": "heading_3",
+      "text": "Main Results"
+    },
+    {
+      "id": "162ab8e5-2126-80a3-a705-f0a03c1fddee",
+      "type": "bulleted_list_item",
+      "text": "State-of-the-art results on open-domain QA tasks (Natural Questions, WebQuestions, CuratedTrec)"
+    },
+    {
+      "id": "162ab8e5-2126-80d7-b587-fef2be710c1f",
+      "type": "bulleted_list_item",
+      "text": "Better performance on generation tasks like MS-MARCO and Jeopardy question generation"
+    },
+    {
+      "id": "162ab8e5-2126-80ca-8627-e03197e5bbae",
+      "type": "bulleted_list_item",
+      "text": "More factual and specific outputs compared to BART baseline"
+    },
+    {
+      "id": "162ab8e5-2126-808a-8270-db093f490af6",
+      "type": "bulleted_list_item",
+      "text": "Strong performance on FEVER fact verification without requiring retrieval supervision"
+    },
+    {
+      "id": "162ab8e5-2126-8010-a59c-c7c64efacca7",
+      "type": "heading_3",
+      "text": "Key Advantages"
+    },
+    {
+      "id": "162ab8e5-2126-8064-b1c0-fbe4872f197a",
+      "type": "bulleted_list_item",
+      "text": "Knowledge can be easily updated by swapping the document index"
+    },
+    {
+      "id": "162ab8e5-2126-808d-82fc-ee0a4b5832c8",
+      "type": "bulleted_list_item",
+      "text": "More interpretable as retrieved documents can be inspected"
+    },
+    {
+      "id": "162ab8e5-2126-8080-8b24-ff3298e63277",
+      "type": "bulleted_list_item",
+      "text": "Generates more specific and factual content than parametric-only models"
+    },
+    {
+      "id": "162ab8e5-2126-80a8-934f-fb550d0412e8",
+      "type": "bulleted_list_item",
+      "text": "Requires fewer parameters than comparable performing models"
+    },
+    {
+      "id": "162ab8e5-2126-808f-bd01-e3fc121302ca",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "162ab8e5-2126-80a5-ad26-c29ee0ceaec8",
+      "type": "heading_1",
+      "text": "Machine Unlearning Doesn\u2019t Do What You Think: Lessons for Generative AI Policy, Research, and Practice\n"
+    },
+    {
+      "id": "162ab8e5-2126-80bc-ba70-cf6ce5e0e6aa",
+      "type": "paragraph",
+      "text": "machine unlearning. It's a fascinating area of AI research that focuses on removing specific data or learned patterns from trained machine learning models. This capability is particularly important for addressing privacy concerns and complying with regulations like GDPR's \"right to be forgotten.\""
+    },
+    {
+      "id": "162ab8e5-2126-80f7-8d44-fb01d64d8983",
+      "type": "paragraph",
+      "text": "The basic idea is to selectively eliminate the influence of certain training examples without having to retrain the entire model from scratch, which would be computationally expensive. There are several approaches to machine unlearning, including:"
+    },
+    {
+      "id": "162ab8e5-2126-8020-a937-d138a1d2d08a",
+      "type": "numbered_list_item",
+      "text": "Scrubbing techniques that modify model parameters to reduce the influence of specific data points"
+    },
+    {
+      "id": "162ab8e5-2126-8065-afbd-e4a69872af7c",
+      "type": "numbered_list_item",
+      "text": "SISA training (Sharded, Isolated, Sliced, Aggregated) which divides training data into shards to make unlearning more efficient"
+    },
+    {
+      "id": "162ab8e5-2126-8054-be11-e0d0acef7f33",
+      "type": "numbered_list_item",
+      "text": "Approximate unlearning methods that balance computational efficiency with unlearning effectiveness"
+    },
+    {
+      "id": "164ab8e5-2126-803b-834d-f4d95ff85282",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "164ab8e5-2126-804b-8050-d2502ad901be",
+      "type": "heading_1",
+      "text": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big"
+    },
+    {
+      "id": "164ab8e5-2126-802b-972d-f96c92e4c654",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "164ab8e5-2126-801d-97e2-fb5eb4365907",
+      "type": "paragraph",
+      "text": "The paper critically examines the trend of creating increasingly large language models (LMs) in NLP and raises several key concerns:"
+    },
+    {
+      "id": "164ab8e5-2126-80a4-87e3-f97f6d5e0ff8",
+      "type": "numbered_list_item",
+      "text": "Environmental and Financial Costs"
+    },
+    {
+      "id": "164ab8e5-2126-8008-805f-e6d5de769636",
+      "type": "bulleted_list_item",
+      "text": "Training large LMs requires enormous computational resources and energy"
+    },
+    {
+      "id": "164ab8e5-2126-809a-b36a-f19e96b7b338",
+      "type": "bulleted_list_item",
+      "text": "This has significant environmental impact through carbon emissions"
+    },
+    {
+      "id": "164ab8e5-2126-8049-a023-ef2b952747d9",
+      "type": "bulleted_list_item",
+      "text": "The high costs limit access to this research to wealthy institutions"
+    },
+    {
+      "id": "164ab8e5-2126-80a6-a4db-d0902aa642af",
+      "type": "bulleted_list_item",
+      "text": "These negative impacts disproportionately affect marginalized communities"
+    },
+    {
+      "id": "164ab8e5-2126-8049-a987-f8e20feac10f",
+      "type": "numbered_list_item",
+      "text": "Data Quality Issues"
+    },
+    {
+      "id": "164ab8e5-2126-80ac-940c-fe597469b0a6",
+      "type": "bulleted_list_item",
+      "text": "Large training datasets from the internet encode biases and toxic content"
+    },
+    {
+      "id": "164ab8e5-2126-8006-b25e-dbb632c3f7c3",
+      "type": "bulleted_list_item",
+      "text": "They overrepresent hegemonic viewpoints and dominant groups"
+    },
+    {
+      "id": "164ab8e5-2126-8021-9a71-f291c84fa335",
+      "type": "bulleted_list_item",
+      "text": "Marginalized voices and perspectives are often filtered out"
+    },
+    {
+      "id": "164ab8e5-2126-8096-952a-d06fc1b73fe5",
+      "type": "bulleted_list_item",
+      "text": "Data curation and documentation are insufficient at this scale"
+    },
+    {
+      "id": "164ab8e5-2126-809a-9be3-ca75f011a462",
+      "type": "numbered_list_item",
+      "text": "Limitations of Language Models"
+    },
+    {
+      "id": "164ab8e5-2126-80c0-aa65-eb3de8843be6",
+      "type": "bulleted_list_item",
+      "text": "LMs don't truly understand language or meaning"
+    },
+    {
+      "id": "164ab8e5-2126-80d9-82de-ed51b76798fc",
+      "type": "bulleted_list_item",
+      "text": "They learn to manipulate linguistic form without comprehension"
+    },
+    {
+      "id": "164ab8e5-2126-80fe-9026-f90c674d48ec",
+      "type": "bulleted_list_item",
+      "text": "Their apparent capabilities can mislead both researchers and the public"
+    },
+    {
+      "id": "164ab8e5-2126-809b-b8eb-c926350bc13e",
+      "type": "bulleted_list_item",
+      "text": "Success on benchmarks doesn't equal real language understanding"
+    },
+    {
+      "id": "164ab8e5-2126-80e7-b1e3-f8cbe09352d2",
+      "type": "numbered_list_item",
+      "text": "Risks and Harms"
+    },
+    {
+      "id": "164ab8e5-2126-803b-810f-cf8793ac5085",
+      "type": "bulleted_list_item",
+      "text": "LMs can amplify biases and generate toxic content"
+    },
+    {
+      "id": "164ab8e5-2126-80eb-9c47-c8022255369e",
+      "type": "bulleted_list_item",
+      "text": "They can be misused for generating misleading content at scale"
+    },
+    {
+      "id": "164ab8e5-2126-80f0-afdd-f7fd48bafb66",
+      "type": "bulleted_list_item",
+      "text": "The seeming fluency of output masks the lack of understanding"
+    },
+    {
+      "id": "164ab8e5-2126-803b-817a-cb3f877eab2c",
+      "type": "bulleted_list_item",
+      "text": "There are risks from memorized personal information in training data"
+    },
+    {
+      "id": "16bab8e5-2126-80a2-a35a-f9357d2f3ec9",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "16bab8e5-2126-80f5-8170-cd2c3fe32c9b",
+      "type": "heading_2",
+      "text": "AutoHall: Automated Hallucination Dataset Generation for Large Language Models"
+    },
+    {
+      "id": "16bab8e5-2126-806c-8450-c1e9e9880b0b",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "16bab8e5-2126-804c-b1df-fdf822d0a74d",
+      "type": "paragraph",
+      "text": "Key Points:"
+    },
+    {
+      "id": "16bab8e5-2126-807e-af12-f6caee0d6be1",
+      "type": "numbered_list_item",
+      "text": "Problem Statement:"
+    },
+    {
+      "id": "16bab8e5-2126-8011-83bd-c0b6698322b1",
+      "type": "bulleted_list_item",
+      "text": "LLMs often generate hallucinations (non-factual or fabricated information)"
+    },
+    {
+      "id": "16bab8e5-2126-804c-8f12-ff8cd243bdd2",
+      "type": "bulleted_list_item",
+      "text": "Current hallucination detection requires expensive and time-consuming manual annotation"
+    },
+    {
+      "id": "16bab8e5-2126-80c7-802a-ecb987aea7d0",
+      "type": "bulleted_list_item",
+      "text": "Existing datasets become outdated as models are updated"
+    },
+    {
+      "id": "16bab8e5-2126-80bc-8618-ed283598859a",
+      "type": "numbered_list_item",
+      "text": "Proposed Solution - AutoHall:"
+    },
+    {
+      "id": "16bab8e5-2126-80f3-9c3f-cb7f1cc76529",
+      "type": "bulleted_list_item",
+      "text": "An automated approach to create hallucination detection datasets using existing fact-checking datasets"
+    },
+    {
+      "id": "16bab8e5-2126-8089-a1bc-f5db07d9c2ad",
+      "type": "bulleted_list_item",
+      "text": "Works by having LLMs generate references about claims and comparing them to ground truth labels"
+    },
+    {
+      "id": "16bab8e5-2126-80bd-a2ff-fac29d83efcc",
+      "type": "bulleted_list_item",
+      "text": "Eliminates need for manual annotation and can be applied to any LLM"
+    },
+    {
+      "id": "16bab8e5-2126-8038-8c1f-de3f935513ae",
+      "type": "numbered_list_item",
+      "text": "Methodology:"
+    },
+    {
+      "id": "16bab8e5-2126-8016-b3c4-e8ccbcd149d8",
+      "type": "bulleted_list_item",
+      "text": "Three-step process:\na) Reference Generation: LLM generates references for claims from fact-checking datasets\nb) Claim Classification: LLM performs binary classification of claims\nc) Hallucination Collection: Compares classification results with ground truth labels"
+    },
+    {
+      "id": "16bab8e5-2126-8056-80fb-e6ec85853652",
+      "type": "numbered_list_item",
+      "text": "Detection Method:"
+    },
+    {
+      "id": "16bab8e5-2126-8025-aac8-d3694bac7ba2",
+      "type": "bulleted_list_item",
+      "text": "Introduces a zero-resource black-box hallucination detection approach"
+    },
+    {
+      "id": "16bab8e5-2126-80cb-aa71-eaf039ff29ab",
+      "type": "bulleted_list_item",
+      "text": "Based on self-contradiction detection"
+    },
+    {
+      "id": "16bab8e5-2126-8005-95c7-ceb8a8e53498",
+      "type": "bulleted_list_item",
+      "text": "Compares multiple generated references to identify inconsistencies"
+    },
+    {
+      "id": "16bab8e5-2126-802d-b5cb-e0527a677e17",
+      "type": "bulleted_list_item",
+      "text": "Uses 13 comparison pairs for optimal results"
+    },
+    {
+      "id": "16bab8e5-2126-802e-9b9a-d7e56092887d",
+      "type": "numbered_list_item",
+      "text": "Key Findings:"
+    },
+    {
+      "id": "16bab8e5-2126-808a-b95b-f2e9c6db59ee",
+      "type": "bulleted_list_item",
+      "text": "Hallucination rates in LLMs typically range from 20-30%"
+    },
+    {
+      "id": "16bab8e5-2126-80de-b605-fac616e90ede",
+      "type": "bulleted_list_item",
+      "text": "Different topics show varying hallucination rates:"
+    },
+    {
+      "id": "16bab8e5-2126-8067-8899-ca4d9d31fd92",
+      "type": "bulleted_list_item",
+      "text": "The method achieves superior performance compared to existing baselines"
+    },
+    {
+      "id": "16bab8e5-2126-80e4-a3b7-c0c130964bdd",
+      "type": "bulleted_list_item",
+      "text": "Higher temperatures in LLM responses generally lead to better hallucination detection"
+    },
+    {
+      "id": "16bab8e5-2126-8021-ad49-d4adeb4f656e",
+      "type": "numbered_list_item",
+      "text": "Limitations:"
+    },
+    {
+      "id": "16bab8e5-2126-80ca-9cba-c293216b3bd3",
+      "type": "bulleted_list_item",
+      "text": "Possibility of false positives affecting detection accuracy"
+    },
+    {
+      "id": "16bab8e5-2126-801b-a790-e90672f5d3c0",
+      "type": "bulleted_list_item",
+      "text": "Heavy reliance on LLMs' classification performance"
+    },
+    {
+      "id": "16bab8e5-2126-801a-8875-ce33095085f5",
+      "type": "bulleted_list_item",
+      "text": "Requires human validation for verification"
+    },
+    {
+      "id": "16bab8e5-2126-8049-9f2b-df101bc7c2b3",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "16bab8e5-2126-80e6-b8e2-c4d3c4118169",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "16bab8e5-2126-8096-aa01-ee0ca82c85d0",
+      "type": "paragraph",
+      "text": "Let me explain the key aspects of the self-contradiction detection method:"
+    },
+    {
+      "id": "16bab8e5-2126-8001-8fbf-fe19c3efa713",
+      "type": "numbered_list_item",
+      "text": "Core Principle:"
+    },
+    {
+      "id": "16bab8e5-2126-80f6-ad31-d0b2a5362ee4",
+      "type": "bulleted_list_item",
+      "text": "Based on the idea that if an LLM truly understands a topic, its multiple responses about that topic should be consistent"
+    },
+    {
+      "id": "16bab8e5-2126-8002-b472-cd3a41813573",
+      "type": "bulleted_list_item",
+      "text": "When hallucinating, the LLM is more likely to generate contradictory information across different responses"
+    },
+    {
+      "id": "16bab8e5-2126-80d8-b759-dc2e665c35a2",
+      "type": "numbered_list_item",
+      "text": "Process:\na) Take the original LLM response that needs to be checked\nb) Generate K independent responses (K=13 in their experiments) about the same topic\nc) Compare the original response with each of the K samples for contradictions\nd) If contradictions are found, this suggests potential hallucination"
+    },
+    {
+      "id": "175ab8e5-2126-80ee-bd1f-f9129195cfdf",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "175ab8e5-2126-80db-86f3-c2f89df33ab2",
+      "type": "paragraph",
+      "text": "REAC T: SYNERGIZING REASONING AND ACTING IN LANGUAGE MODELS"
+    },
+    {
+      "id": "175ab8e5-2126-803c-b9d2-c52a4e4b9ae7",
+      "type": "paragraph",
+      "text": ""
+    },
+    {
+      "id": "175ab8e5-2126-8054-86f0-c4fa1da516c6",
+      "type": "paragraph",
+      "text": "Key Points:"
+    },
+    {
+      "id": "175ab8e5-2126-80cd-a53f-f2a8af86f8f7",
+      "type": "numbered_list_item",
+      "text": "The Problem:"
+    },
+    {
+      "id": "175ab8e5-2126-802d-baf1-fbb98983f728",
+      "type": "bulleted_list_item",
+      "text": "While language models have shown strong abilities in both reasoning (chain-of-thought prompting) and acting (action plan generation), these capabilities have typically been studied separately"
+    }
+  ]
+}
